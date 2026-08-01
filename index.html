@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超市货物仓库管理系统 - 登录</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-header">
+            <div class="login-icon">🏪</div>
+            <h1>超市货物仓库管理系统</h1>
+            <p>Supermarket Warehouse Management System</p>
+        </div>
+        <form class="login-form" id="loginForm">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <div class="input-icon-wrapper">
+                    <span class="input-icon">👤</span>
+                    <input type="text" id="username" placeholder="请输入用户名" required autocomplete="off">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <div class="input-icon-wrapper">
+                    <span class="input-icon">🔒</span>
+                    <input type="password" id="password" placeholder="请输入密码" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="role">登录身份</label>
+                <div class="role-selector">
+                    <label class="role-option">
+                        <input type="radio" name="role" value="admin" checked>
+                        <span class="role-card">
+                            <span class="role-icon">🔧</span>
+                            <span class="role-name">管理员</span>
+                            <span class="role-desc">全部功能权限</span>
+                        </span>
+                    </label>
+                    <label class="role-option">
+                        <input type="radio" name="role" value="employee">
+                        <span class="role-card">
+                            <span class="role-icon">👨‍💼</span>
+                            <span class="role-name">员工</span>
+                            <span class="role-desc">日常操作权限</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-error" id="loginError"></div>
+            <button type="submit" class="btn-login">登 录</button>
+        </form>
+        <div class="login-footer">
+            <p>默认账号：admin / 123456（管理员）| employee / 123456（员工）</p>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
